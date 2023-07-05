@@ -78,8 +78,16 @@ function ortalamaBul(aSayilar) {
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-function ortalamadanBuyukleriBul(/* kodlar buraya */) {
-  // kodlar buraya
+function ortalamadanBuyukleriBul(aNumbers, aAvgFunc) {
+  if (!aNumbers.length) {
+    return null;
+  } else {
+    const totalSum = aNumbers.reduce((sum, number) => {
+      return sum + number;
+    }, 0);
+    const avg = totalSum / aNumbers.length;
+    return aNumbers.filter((num) => (num >= avg ? true : false));
+  }
 }
 
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
