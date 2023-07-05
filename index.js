@@ -16,9 +16,18 @@
   örnek output: ""
 */
 
-function dosyaAdiniBul(/* kodlar buraya */) {
-  // kodlar buraya
+function dosyaAdiniBul(aPath) {
+  if (aPath) {
+    const folders = aPath.split("/");
+    return folders[folders.length - 1];
+  } else {
+    return "";
+  }
 }
+
+console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"));
+console.log(dosyaAdiniBul("Beethoven_5.mp3"));
+console.log(dosyaAdiniBul(""));
 
 /*
   GÖREV 2
@@ -38,9 +47,7 @@ function dosyaAdiniBul(/* kodlar buraya */) {
   örnek output: 104
 */
 
-function ortalamaBul(/* kodlar buraya */) {
-  // kodlar buraya
-}
+function ortalamaBul() {}
 
 /*
   GÖREV 3
