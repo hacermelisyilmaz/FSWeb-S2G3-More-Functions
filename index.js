@@ -47,7 +47,16 @@ console.log(dosyaAdiniBul(""));
   örnek output: 104
 */
 
-function ortalamaBul() {}
+function ortalamaBul(aSayilar) {
+  if (aSayilar.length) {
+    const sayilarToplami = aSayilar.reduce((toplam, sayi) => {
+      return toplam + sayi;
+    }, 0);
+    return sayilarToplami / aSayilar.length;
+  } else {
+    return null;
+  }
+}
 
 /*
   GÖREV 3
